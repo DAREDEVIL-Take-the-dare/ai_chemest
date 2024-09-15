@@ -12,7 +12,7 @@ generation_config = {
     "temperature": 1,
     "top_p": 0.95,
     "top_k": 0,
-    "max_output_tokens": 2000,
+    "max_output_tokens": 2500,
 }
 
 # Safety settings to block harmful content

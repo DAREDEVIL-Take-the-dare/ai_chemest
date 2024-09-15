@@ -2,8 +2,7 @@ import streamlit as st
 from pathlib import Path
 import google.generativeai as genai
 from google_api_key import google_api_key
-from draw_molecule import get_compound_structure
-import base64
+
 ## Streamlit App
 
 genai.configure(api_key=google_api_key)
@@ -133,9 +132,6 @@ with col2:
 # Input for text
 with col11:
      text_input = st.text_area('',placeholder="Enter the text-based reaction description",height=50)
-     images = get_compound_structure(google_api_key, text_input)
-     print(images)
-
 with col13:
     st.markdown('  ')
 with col12:
@@ -144,7 +140,7 @@ with f:
     st.markdown('  ')
 # Submit button to generate analysis
 submit = st.button("Generate Analysis",)
-r1,r2,r3=st.columns([0.2,4,1])
+r1,r2,r3=st.columns([1,6,1])
 if submit:
     prompt_parts = []
 
@@ -183,8 +179,7 @@ if submit:
                 st.title('Generated Analysis')
                 st.markdown(content_raw,unsafe_allow_html=True)
             with r3:
-                for img in images:
-                    st.image(img, caption="Molecular Structure", use_column_width=True)
+                st.markdown('  ')
 
 
         except Exception as e:

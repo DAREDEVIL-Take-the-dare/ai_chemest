@@ -1,9 +1,21 @@
+import subprocess
+import sys
+
+def install_dependencies():
+    try:
+        # Install necessary system dependencies for RDKit rendering
+        subprocess.check_call([sys.executable, "-m", "pip", "install", "apt-get"])
+        subprocess.run("apt-get update && apt-get install -y libxrender1 libxext6 libsm6 libgl1-mesa-glx", shell=True)
+        print("System dependencies installed successfully.")
+    except Exception as e:
+        print(f"Error installing system dependencies: {e}")
+
+# Call the function to install dependencies
+install_dependencies()
 import google.generativeai as genai
 from rdkit import Chem
 from rdkit.Chem import Draw
 from google_api_key import google_api_key
-from io import BytesIO
-from PIL import Image
 
 
 def configure_genai(api_key):

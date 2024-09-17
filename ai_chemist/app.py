@@ -62,6 +62,7 @@ system_prompts = [
     - Equilibrium Considerations: If applicable, analyze whether the reaction reaches equilibrium, and if so, whether it can be shifted to favor the desired products by changing conditions (e.g., Le Chatelier’s principle).
     - Energy Profile: Evaluate the energy changes associated with the reaction, such as activation energy, and if the reaction is spontaneous or requires an external energy source (e.g., light, electricity).
     - Side Reactions: Identify any potential side reactions that could occur, leading to by-products, and suggest how to minimize these side reactions
+    if in text name of the compound us given for example water or h2o only then give its chemical properties.
     
     For both cases (with or without an image):
     2. Reaction Prediction: in tabular format. Based on the provided inputs (image, text, or both), predict possible products, intermediates, 

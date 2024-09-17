@@ -153,7 +153,7 @@ with col2:
 
 # Input for text
 with col11:
-     text_input = st.text_area('',placeholder="Enter the text-based reaction description",height=50)
+     text_input = st.text_area('',placeholder="Enter your query regarding Chemestry : For example 'what is water','what is polymers','generate new compound using Aluminium' etc",height=50)
 with col13:
     st.markdown('*OR*')
 with col12:

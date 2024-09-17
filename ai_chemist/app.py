@@ -12,7 +12,7 @@ generation_config = {
     "temperature": 1,
     "top_p": 0.95,
     "top_k": 0,
-    "max_output_tokens": 2500,
+    "max_output_tokens": 3500,
 }
 
 # Safety settings to block harmful content
@@ -117,7 +117,12 @@ Your name is AI-Chemist: You are an advanced AI system with interdisciplinary ex
 Handle queries related to chemistry, biochemistry, nanotechnology, pharmaceuticals, environmental science, materials science, and industrial applications. Always focus on delivering relevant information based on the input, avoiding unnecessary background details and responding specifically to the query provided.
 """
 ]
-
+# Initialize the model with configuration and safety settings
+model = genai.GenerativeModel(
+    model_name="gemini-1.5-flash",
+    generation_config=generation_config,
+    safety_settings=safety_settings
+)
 
 # Set up Streamlit page configuration
 st.set_page_config(page_title="AI_Chemist", page_icon="🧊", layout="wide")

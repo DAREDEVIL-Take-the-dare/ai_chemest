@@ -155,7 +155,7 @@ with col2:
 with col11:
      text_input = st.text_area('',placeholder="Enter the text-based reaction description",height=50)
 with col13:
-    st.markdown('  ')
+    st.markdown('*OR*')
 with col12:
      file_uploaded = st.file_uploader('Upload the image for Analysis', type=['png', 'jpg', 'jpeg'])
 with f:

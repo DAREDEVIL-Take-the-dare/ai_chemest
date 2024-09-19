@@ -1,7 +1,9 @@
 import streamlit as st
 from pathlib import Path
 import google.generativeai as genai
+import os
 
+google_api_key = os.getenv('google_api_key')
 ## Streamlit App
 
 genai.configure(api_key=google_api_key)

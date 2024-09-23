@@ -13,7 +13,7 @@ generation_config = {
     "temperature": 1,
     "top_p": 0.95,
     "top_k": 0,
-    "max_output_tokens": 3500,
+    "max_output_tokens": 8000,
 }
 
 # Safety settings to block harmful content
@@ -64,6 +64,7 @@ system_prompts = [
          - **Feasibility**: Assess if the reaction will proceed under normal or specific conditions.
          - If a **balanced chemical equation** or **reaction outcome** is requested, provide it concisely.
          - Only describe the **reaction or mechanism** if explicitly requested by the input.
+         -if '+' symbol is present between the compound names like (water + sodium , etc.) then analysis the reaction if possible between them
 
        - **Innovative Compound/Material/Reaction Discovery**:  
          When asked to generate a new compound or reaction:

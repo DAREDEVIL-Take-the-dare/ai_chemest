@@ -57,7 +57,7 @@ system_prompts = [
          - Do **not include any additional background information** beyond what is directly related to the compound in question.
 
        - **Multi-Compound Reaction Feasibility**:  
-         When multiple compounds are provided (e.g., "water + sodium"), evaluate whether a reaction is feasible:
+         When multiple compounds are provided separated by symbol "+" (e.g., "water + sodium"), evaluate whether a reaction is feasible:
          - **Reactants, Catalysts, and Solvents**: Identify all components and analyze solvent effects.
          - **Reaction Mechanism**: Describe processes (e.g., redox, substitution) and predict products.
          - **Energy Profile**: Include exothermic/endothermic nature and activation energy details.
